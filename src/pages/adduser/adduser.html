@@ -1,0 +1,158 @@
+<!--
+  Generated template for the AdduserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Adduser</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="text-center" style="background-color: #ee1b2e;text-align: center;">
+      <form (ngSubmit)="signup()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col text-center>
+              <img class="circle-pic" src="{{imgPreview}}" (click)="getPhoto()">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">First Name</ion-label>
+              <ion-input type="text"  name="firstname" [(ngModel)]="userData.firstname" pattern="^[A-Za-z]*$" required></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Last Name</ion-label>
+              <ion-input type="text" name="lastname" [(ngModel)]="userData.lastname" pattern="^[A-Za-z]*$" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Looking For</ion-label>
+              <ion-select name="lookingfor" [(ngModel)]="userData.lookingfor" required>
+                 <ion-option  [value] ="Bride" >Bride</ion-option>
+                 <ion-option  [value] ="Groom" >Groom</ion-option>
+              </ion-select>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">DOB</ion-label>
+              <ion-input type="Date" name="dob" [(ngModel)]="userData.dob"  required></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Email Address</ion-label>
+              <ion-input type="text"  name="email" [(ngModel)]="userData.email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"  required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+             <ion-item color="newcolor">
+              <ion-label floating color="light">Phone No</ion-label>
+              <ion-input type="tel"  name="mobile" [(ngModel)]="userData.mobile" pattern="[0-9]*" maxlength="10" required></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col> 
+             <ion-item color="newcolor">
+              <ion-label floating color="light">Whatsapp No</ion-label>
+              <ion-input type="tel"  name="whatsappno" [(ngModel)]="userData.whatsappno" pattern="[0-9]*" maxlength="10" required></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Religion</ion-label>
+              <ion-select name="religion" [(ngModel)]="userData.religion" required>
+                 <ion-option value="Christianity">Christianity</ion-option>
+                 <ion-option value="Islam">Islam</ion-option>
+                 <ion-option value="Hinduism" selected="">Hinduism</ion-option>
+                 <ion-option value="Sikh">Sikh</ion-option>
+                 <ion-option value="Ahmedi">Ahmedi</ion-option>
+                 <ion-option value="Atheist">Atheist</ion-option>
+                 <ion-option value="Bhori">Bhori</ion-option>
+                 <ion-option value="Buddhisim">Buddhisim</ion-option>
+                 <ion-option value="Dawoodi Bhora">Dawoodi Bhora</ion-option>
+                 <ion-option value="jain">jain</ion-option>
+                 <ion-option value="Spiritualism">Spiritualism</ion-option>
+                 <ion-option value="Zoroastrain Parsi">Zoroastrain Parsi</ion-option>
+              </ion-select>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Adhar No</ion-label>
+              <ion-input type="text"  name="adharno" [(ngModel)]="userData.adharno" ></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Caste</ion-label>
+              <ion-input type="text"  name="caste" [(ngModel)]="userData.caste" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Address</ion-label>
+              <ion-input type="text"  name="address1" [(ngModel)]="userData.address1" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">State</ion-label>
+              <ion-input type="text"  name=" state" [(ngModel)]="userData.state" pattern="^[A-Za-z]*$" required></ion-input>
+            </ion-item>
+       </ion-col>
+       <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">City</ion-label>
+              <ion-input type="tel"  name="city" [(ngModel)]="userData.city" pattern="^[A-Za-z]*$"  required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Country</ion-label>
+              <ion-input type="text"  name="country" [(ngModel)]="userData.country" pattern="^[A-Za-z]*$" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Password</ion-label>
+              <ion-input type="password" name="password" [(ngModel)]="userData.password" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="bgcolor" style="margin-top: 30px;color: #ee1b2e;font-size: 18px;font-weight: 500;" full type="submit" [disabled]="!registerForm.form.valid" round>Register</button>
+        </ion-col>
+      </ion-row>
+    </form>
+    
+</ion-content>

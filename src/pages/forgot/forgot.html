@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ForgotPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar text-center>
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="text-center" style="background-color: #ee1b2e;text-align: center;">
+  
+  <form (ngSubmit)="forgotpassword()" #registerForm="ngForm">
+  	  <ion-row>
+        <ion-col>
+          <p style="color: #f4e8e9;"> If you have forgot your password  then please enter you email id and you will receive a new one</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">User Type</ion-label>
+              <ion-select name="type" [(ngModel)]="userData.type" required>
+                 <ion-option  value = "User" >User</ion-option>
+                 <ion-option  value = "Franchise" >Franchise</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item  color="newcolor">
+                <ion-label floating color="light">Email ID</ion-label>   
+                <ion-input type="text" name="email" [(ngModel)]="userData.email" required></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <button ion-button class="bgcolor" full type="submit" style="margin-top: 30px;color: #ee1b2e;font-size: 18px;font-weight: 500;" [disabled]="!registerForm.form.valid" round>SUBMIT</button>
+      </ion-row>
+
+    </form>
+</ion-content>

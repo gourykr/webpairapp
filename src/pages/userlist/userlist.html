@@ -1,0 +1,60 @@
+<!--
+  Generated template for the UserlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>User List</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="exit" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="display: inline-flex;">
+  <ion-searchbar
+  [(ngModel)]="userData.search"
+  [showCancelButton]="shouldShowCancel"
+  (ionChange)="searchterm()"
+  (ionCancel)="onCancel($event)"></ion-searchbar>
+  <ion-icon name="add" style="padding-top: 23px;padding-right: 5px;color: #00dc00;" ></ion-icon><span style="padding-top: 23px;padding-right: 20px;color: #00dc00;" (click)="adduser()">Add</span>
+  </div>
+
+  <ion-list *ngIf="profile?.length">
+  <ion-item *ngFor="let item of profile">
+    <ion-avatar item-start *ngIf="item.image_url?.length">
+        <img [src]="item.image_url">
+      </ion-avatar>
+      <ion-avatar item-start *ngIf="item.image_url?.length==0">
+        <img src="assets/img/pro.png">
+      </ion-avatar>
+      <div >
+      <h2 style="color: black">{{ item.firstname }}</h2>
+      <h6 style="color: black">Age:{{item.age }},Caste:{{item.caste}}</h6>
+     </div>
+     <div item-end>
+       <ion-icon name="open" style="color: green;" (click)="edituserdetails(item.id)"></ion-icon>
+    </div>
+  </ion-item>
+
+</ion-list>
+
+  <!-- <ion-list transparent >
+    <button ion-item style="color:red;text-align: center;">
+      <br>
+      <p>No User List Found</p>
+    </button>
+  </ion-list> -->
+
+</ion-content>

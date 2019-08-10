@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="exit" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="grid-basic-page">
+  <div class="backgound-image">
+    <img src="assets/img/logo.png">
+    <ion-searchbar
+  [(ngModel)]="userData.search"
+  [showCancelButton]="shouldShowCancel"
+  (ionChange)="searchterm()"
+  (ionCancel)="onCancel($event)"></ion-searchbar>
+  </div>
+  <ion-list *ngIf="profile?.length">
+  <ion-item *ngFor="let item of profile">
+      <ion-avatar item-start *ngIf="item.image_url?.length">
+        <img [src]="item.image_url">
+      </ion-avatar>
+      <ion-avatar item-start *ngIf="item.image_url?.length==0">
+        <img src="assets/img/pro.png">
+      </ion-avatar>
+     <div>
+      <h2 style="color: black">{{ item.firstname }}</h2>
+      <h6 style="color: black">Age:{{item.age }},Caste:{{item.caste}}</h6>
+     </div>
+     <div item-end>
+       <ion-icon name="arrow-dropright" style="color: green;" (click)="userdetails(item.id)"></ion-icon>
+     </div>
+  </ion-item>
+</ion-list>
+</ion-content>

@@ -1,0 +1,62 @@
+[
+  {
+    "category":"My Course","icon":"assets/icon/menu/menu-icon.png",
+    "subs": [
+      {
+        "subcategory":"Course Enrolled","icon":"assets/icon/menu/sub-menu-1.png"
+      },
+      {
+        "subcategory":"Extend Course","icon":"assets/icon/menu/sub-menu-2.png"
+      },
+      {
+        "subcategory":"Exam","icon":"assets/icon/menu/sub-menu-3.png"
+      },
+      {
+        "subcategory":"Reappear For Exam","icon":"assets/icon/menu/sub-menu-4.png"
+      },
+      {
+        "subcategory":"My certificates","icon":"assets/icon/menu/sub-menu-3.png"
+      }
+    ]
+  },
+  {
+    "category":"My certification Exam","icon":"assets/icon/menu/menu-icon2.png",
+    "subs": []
+  },
+  {
+    "category":"GST Course","icon":"assets/icon/menu/menu-icon3.png",
+    "subs": []
+   },
+  {
+    "category":"GST Calculator","icon":"assets/icon/menu/menu-icon4.png",
+    "subs": []
+  },
+  {
+    "category":"GST Quiz","icon":"assets/icon/menu/menu-icon5.png",
+    "subs": []
+  },
+  {
+    "category":"Notification Circular","icon":"assets/icon/menu/menu-icon6.png",
+    "subs": []
+  },
+  {
+    "category":"Rates,HSN codes","icon":"assets/icon/menu/menu-icon7.png",
+    "subs": []
+  },
+  {
+    "category":"GST Samachar","icon":"assets/icon/menu/menu-icon8.png",
+    "subs": []
+  },
+  {
+    "category":"Webinars","icon":"assets/icon/menu/menu-icon9.png",
+    "subs": []
+  },
+  {
+    "category":"GST Acts & Rules","icon":"assets/icon/menu/menu-icon10.png",
+    "subs": []
+  },
+  {
+    "category":"Setting","icon":"assets/icon/menu/menu-icon11.png",
+    "subs": []
+  }
+]

@@ -1,0 +1,186 @@
+
+<ion-content fullscreen>
+  <div class="header-parent">    
+    <img  src="assets/img/bg2.jpg">
+
+<!-- <div class="header-social">
+  <img style="width:18%; margin-right:3vw" src="assets/img/love-btn.png">
+  <img style="width:40%;" src="assets/img/friend-btn.png">
+  <img style="width:18%; margin-left:3vw" src="assets/img/chat-btn.png">
+
+</div> -->
+
+<div class="profile">
+  <img *ngIf="profile.image_url!=''" [src]="profile.image_url" style="border-radius:60%;">
+  <img *ngIf="profile.image_url==''"  src="assets/user128.png">
+</div>
+
+<div class="title-name">
+  <h3>{{ profile.name }}</h3>
+</div>
+
+<div class="profile-location">
+  <ion-row align-items-center>
+    <ion-col col-8><div><i class="fa fa-map-marker location-icon" aria-hidden="true"></i></div></ion-col>
+    <ion-col col-4><div><p class="location">{{ profile.state }}</p></div></ion-col>
+  </ion-row>
+
+</div>
+
+  </div>
+
+
+<div class="counter">
+  <ion-row>
+    <ion-col>
+      <!-- <p class="numbers">472</p>
+      <p class="numbers-title">Followers</p> -->
+    </ion-col>
+
+    <ion-col>
+      <!-- <p class="numbers">119</p>
+      <p class="numbers-title">Posts</p> -->
+    </ion-col>
+
+    <ion-col>
+      <!-- <p class="numbers">860</p>
+      <p class="numbers-title">Following</p> -->
+    </ion-col>
+  </ion-row>
+
+</div>
+
+<!-- <ion-slides autoplay="2500" loop="true" slidesPerView="4" class="slides">
+  <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide1.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide2.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide3.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide4.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide5.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide6.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide7.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide8.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide9.png">
+  </ion-slide>
+</ion-slides> -->
+
+
+<div style="position:relative; margin-top:-1vh; margin-left:2vw;">
+<h6>About </h6>
+<p style="font-family:open-sans; font-size:14px; margin-top:-1.5vh">{{ profile.aboutmyself }}</p>
+</div>
+
+<hr>
+
+<div style="position:relative; margin-top:-1vh; margin-left:2vw;">
+<h6>Personal Details </h6>
+<p style="font-family:open-sans; font-size:14px"><b>Mobile :</b> {{ profile.mobile }}</p>
+<p style="font-family:open-sans; font-size:14px"><b>Email :</b> {{ profile.email }}</p>
+<p style="font-family:open-sans; font-size:14px"><b>Address :</b> {{ profile.address }}</p>
+<p style="font-family:open-sans; font-size:14px"><b>City :</b>  {{ profile.city }}</p>
+<p style="font-family:open-sans; font-size:14px"><b>Pincode :</b>  {{ profile.pincode }}</p>
+</div>
+
+<hr>
+
+
+</ion-content>
+
+
+
+<!--  old  
+<ion-header>
+  <ion-navbar>
+    <ion-title>User Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="grid-basic-page" style="background-color: #ee1b2e;">
+
+ <ion-content>
+      <ion-row>
+        <ion-col text-center>
+          <img *ngIf="profile.image_url!=null" [src]="profile.image_url" />
+          <img *ngIf="profile.image_url==null" src="assets/img/profile.png" />
+        </ion-col>
+        <ion-col>
+          <h4>{{ profile.name }},{{ profile.profile_id }}</h4>
+          <p>{{ profile.adharno }},5'3"</p>
+          <p>{{ profile.city }},{{ profile.state }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Email
+        </ion-col>
+        <ion-col text-left>
+          {{ profile.email }}
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Mobile
+        </ion-col >
+        <ion-col text-left>
+          {{ profile.mobile }}
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Address
+        </ion-col>
+        <ion-col text-left>
+         {{ profile.address }}
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         City
+        </ion-col>
+        <ion-col text-left>
+          {{ profile.city }}
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Zip Code
+        </ion-col>
+        <ion-col text-left>
+          {{ profile.pincode }}
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Adhar No
+        </ion-col>
+        <ion-col text-left>
+          {{ profile.adharno }}
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         GSTIN
+        </ion-col>
+        <ion-col text-left>
+          {{ profile.gst_in }}
+        </ion-col>
+      </ion-row>
+         
+</ion-content>
+-->

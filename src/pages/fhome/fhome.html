@@ -1,0 +1,72 @@
+<ion-header style="background-color: transparent;">
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-buttons> 
+    <ion-title>
+
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="exit" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+     <ion-searchbar
+  [(ngModel)]="userData.search"
+  [showCancelButton]="shouldShowCancel"
+  (ionChange)="searchterm()"
+  (ionCancel)="onCancel($event)"></ion-searchbar>
+
+    <!-- <ion-segment [(ngModel)]="stream">
+      <ion-segment-button value="newest">Newest</ion-segment-button>
+      <ion-segment-button value="popular">Popular</ion-segment-button>
+      <ion-segment-button value="trending">Trending</ion-segment-button>
+    </ion-segment> -->
+
+  <ion-list *ngIf="profile?.length">
+  <ion-item *ngFor="let item of profile">
+      <ion-avatar item-start *ngIf="item.image_url?.length">
+        <img [src]="item.image_url">
+      </ion-avatar>
+      <ion-avatar item-start *ngIf="item.image_url?.length==0">
+        <img src="assets/img/pro.png">
+      </ion-avatar>
+     <div>
+      <h2 style="color: black">{{ item.firstname }}</h2>
+      <h6 style="color: black">Age:{{item.age }},Caste:{{item.caste}}</h6>
+     </div>
+     <div item-end>
+       <ion-icon name="arrow-dropright" style="color: green;" (click)="userdetails(item.id)"></ion-icon>
+     </div>
+  </ion-item>
+</ion-list>
+<!-- <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/pro.png">
+      </ion-avatar>
+      <div >
+      <h2>Neha</h2>
+      <p>$10</p>
+      <p></p>
+     </div>
+     <div item-end>
+        Go
+    </div>
+    </ion-item>
+  </ion-list> -->
+  <!-- <ion-list transparent >
+    <button ion-item style="color:red;text-align: center;">
+      <br>
+      <p>No Provider List</p>
+    </button>
+  </ion-list> -->
+
+</ion-content>

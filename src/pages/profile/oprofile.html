@@ -1,0 +1,87 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons icon-start>
+    <button ion-button  (click)="editprofile()">
+     <ion-icon name="create" ></ion-icon>
+   </button>
+  </ion-buttons>
+      
+    <ion-title text-center>
+      My Logo
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="exit" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+      <ion-row>
+        <ion-col>
+          <img class="circle-pic"  [src]="profile.profile_image" />
+        </ion-col>
+        <ion-col>
+          <h4>Goury</h4>
+          <span >Age:25</span>
+          <span >Cast:Rajput</span>
+        </ion-col>
+
+
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Email
+        </ion-col>
+        <ion-col text-left>
+          gourykr@gmail.com
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Phone
+        </ion-col >
+        <ion-col text-left>
+          7210731625
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Location
+        </ion-col>
+        <ion-col text-left>
+          Delhi
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         City
+        </ion-col>
+        <ion-col text-left>
+         delhi
+        </ion-col>
+      </ion-row>
+      <ion-row padding>
+        <ion-col>
+         Zip Code
+        </ion-col>
+        <ion-col text-left>
+          110093
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row padding>
+        <ion-col text-right>
+          <div padding (click)="changepassword()"><img src="assets/icon/change_password.png" style="height: 16px;width: 16px;margin-top: 50px; margin-right: 5px" /><span>Change Password</span>
+          </div>
+        </ion-col>
+      </ion-row>
+</ion-content>

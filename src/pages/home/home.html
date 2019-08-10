@@ -1,0 +1,134 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="exit" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content class="grid-basic-page">
+
+  <div class="backgound-image">
+    <ion-buttons end>
+      <button ion-button style="background-color: transparent;" (click)="logout()">
+        <ion-icon name="exit" ></ion-icon>
+      </button>
+    </ion-buttons>
+    <img src="assets/img/logo.png">
+    <ion-searchbar
+    [(ngModel)]="search"
+    [showCancelButton]="shouldShowCancel"
+    (ionChange)="searchterm()"
+    (ionCancel)="onCancel($event)">
+      
+    </ion-searchbar>
+    
+  </div>
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img width="50" height="50" src="assets/img/state1.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img width="50" height="50" src="assets/img/state3.png"></ion-img>
+      </ion-col>
+       <ion-col>
+        <ion-img width="50" height="50" src="assets/img/state4.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img width="50" height="50" src="assets/img/state4.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <ion-slides *ngIf="states && states.length" autoplay="2500" loop="true" slidesPerView="4" class="slides">
+  <ion-slide *ngFor="let state of states">
+    <img class="slide-image" src="{{state.image}}">
+    <span style="font-size: 10px;">{{ state.state_name }}</span>
+  </ion-slide>
+    <!-- <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide2.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide3.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide4.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide5.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide6.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide7.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide8.png">
+  </ion-slide>
+    <ion-slide>
+    <img class="slide-image" src="assets/img/profile-slide9.png">
+  </ion-slide> -->
+</ion-slides>
+
+  <ion-grid style="background-color: #ee1b2e;text-align: center;">
+    <ion-row>
+      <ion-col>
+        <ion-img  width="80" height="55" src="assets/img/b1.png"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img  width="80" height="55" src="assets/img/b1.png"></ion-img>
+      </ion-col>
+       <ion-col>
+        <ion-img  width="80" height="55"  src="assets/img/b1.png"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h5 style="color: #ece8e9;">Recent Profile Added</h5>
+      </ion-col>
+    </ion-row>
+  <ion-slides autoplay="2500" loop="true" slidesPerView="4" class="slides" style="background-color: #ee1b2e;text-align:center;">
+  <ion-slide *ngFor="let item of profile">
+    <img class="slide-image" [src]="item.image_url" (click)="userdetails(item.id)" style="border-radius: 50%;" *ngIf="item.image_url?.length">
+    <img class="slide-image" style="border-radius: 50%;" src="assets/img/user.jpg" (click)="userdetails(item.id)" *ngIf="item.image_url?.length==0" >
+    <p style="color: #ece8e9;">{{ item.firstname }}</p>
+  </ion-slide>
+    
+ </ion-slides>
+<!--     <ion-row>
+      <ion-col>
+        <ion-img width="40" height="40" src="assets/img/pro.png" (click)="userdetails()"></ion-img><p style="color: #ece8e9;">Neha</p>
+      </ion-col>
+      <ion-col>
+        <ion-img width="40" height="40" src="assets/img/pro.png" (click)="userdetails()"></ion-img><p style="color: #ece8e9;">Neha</p>
+      </ion-col>
+       <ion-col>
+        <ion-img width="40" height="40" src="assets/img/pro.png" (click)="userdetails()"></ion-img><p style="color: #ece8e9;">Neha</p>
+      </ion-col>
+       <ion-col>
+        <ion-img width="40" height="40" src="assets/img/pro.png" (click)="userdetails()"></ion-img><p style="color: #ece8e9;">Neha</p>
+      </ion-col>
+       <ion-col>
+        <ion-img width="40" height="40" src="assets/img/pro.png" (click)="userdetails()"></ion-img><p style="color: #ece8e9;">Neha</p>
+      </ion-col>
+    </ion-row> -->
+  </ion-grid>
+      
+      
+      
+</ion-content>

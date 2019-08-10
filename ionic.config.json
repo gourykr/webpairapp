@@ -1,0 +1,7 @@
+{
+  "name": "wedpair",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

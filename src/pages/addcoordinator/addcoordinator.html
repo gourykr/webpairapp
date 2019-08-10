@@ -1,0 +1,129 @@
+<!--
+  Generated template for the AddcoordinatorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Addcoordinator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="text-center" style="background-color: #ee1b2e;text-align: center;">
+      <form (ngSubmit)="signup()" #registerForm="ngForm">
+  	  <ion-row>
+        <ion-col text-center>
+              <img class="circle-pic" src="{{imgPreview}}" (click)="getPhoto()">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Name</ion-label>
+              <ion-input type="text"  name="name" [(ngModel)]="userData.name" pattern="^[A-Za-z]*$" required></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Email</ion-label>
+              <ion-input type="text"  name="email" [(ngModel)]="userData.email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"  required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+             <ion-item color="newcolor">
+              <ion-label floating color="light">Mobile No</ion-label>
+              <ion-input type="tel"  name="mobile" [(ngModel)]="userData.mobile" pattern="[0-9]*" maxlength="10" required></ion-input>
+            </ion-item>
+        </ion-col>
+         <ion-col> 
+             <ion-item color="newcolor">
+              <ion-label floating color="light">Whatsapp No</ion-label>
+              <ion-input type="tel"  name="whatsappno" [(ngModel)]="userData.whatsappno" pattern="[0-9]*" maxlength="10" required></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Company</ion-label>
+              <ion-input type="text"  name="company" [(ngModel)]="userData.company" ></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Adhar No</ion-label>
+              <ion-input type="text"  name="adharno" [(ngModel)]="userData.adharno" ></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Address</ion-label>
+              <ion-input type="text"  name="address" [(ngModel)]="userData.address" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor" >
+              <ion-label floating color="light">District</ion-label>
+              <ion-input type="text"  name="distric" [(ngModel)]="userData.distric" required></ion-input>
+            </ion-item>
+       </ion-col>
+       <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">City</ion-label>
+              <ion-input type="text"  name="city" [(ngModel)]="userData.city" pattern="^[A-Za-z]*$" required></ion-input>
+            </ion-item>
+       </ion-col>
+       
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">State</ion-label>
+              <ion-input type="text"  name="state" [(ngModel)]="userData.state" pattern="^[A-Za-z]*$" required></ion-input>
+            </ion-item>
+       </ion-col>
+       <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Pin Code</ion-label>
+              <ion-input type="tel"  name="pincode" [(ngModel)]="userData.pincode" pattern="[0-9]*" maxlength="6" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Website</ion-label>
+              <ion-input type="text"  name="website" [(ngModel)]="userData.website"></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">GSTIN</ion-label>
+              <ion-input type="text"  name="gst_in" [(ngModel)]="userData.gst_in" ></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> 
+            <ion-item color="newcolor">
+              <ion-label floating color="light">Password</ion-label>
+              <ion-input type="password" name="password" [(ngModel)]="userData.password" required></ion-input>
+            </ion-item>
+       </ion-col>
+      </ion-row>
+    </form>
+
+</ion-content>
