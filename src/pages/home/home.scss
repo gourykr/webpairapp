@@ -17,11 +17,11 @@ page-home {
 
 .slides {
         max-height: 20%;
-        background-color: #f7f8fa;
+        background-color: #ffffff;
     }
 
 .slide-image {
-        width: 75%;
+        width: 60px;
     }
 
 .searchbar-md .searchbar-input {
@@ -45,6 +45,17 @@ page-home {
     font-family: inherit;
 }
 
+}
 
 
+.swiper-slide img {
+    height: 60px;
+    border: 2px solid #ffffff;
+}
+
+.slide-zoom p {
+    color: white;
+    font-size: 15px;
+    padding-left: 5px !important;
+    padding-top: 5px !important;
 }

@@ -99,14 +99,14 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <h5 style="color: #ece8e9;">Recent Profile Added</h5>
+        <h5 style="color: #ffffff;">Recent Profile Added</h5>
       </ion-col>
     </ion-row>
   <ion-slides autoplay="2500" loop="true" slidesPerView="4" class="slides" style="background-color: #ee1b2e;text-align:center;">
   <ion-slide *ngFor="let item of profile">
     <img class="slide-image" [src]="item.image_url" (click)="userdetails(item.id)" style="border-radius: 50%;" *ngIf="item.image_url?.length">
     <img class="slide-image" style="border-radius: 50%;" src="assets/img/user.jpg" (click)="userdetails(item.id)" *ngIf="item.image_url?.length==0" >
-    <p style="color: #ece8e9;">{{ item.firstname }}</p>
+    <p>{{ item.firstname }}</p>
   </ion-slide>
     
  </ion-slides>

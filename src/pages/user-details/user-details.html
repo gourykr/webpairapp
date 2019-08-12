@@ -13,54 +13,56 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="grid-basic-page" style="background-color: #ee1b2e;">
+<ion-content padding class="grid-basic-page" style="background-color: #ffffff;">
   <!-- <div class="backgound-image">
     <img src="assets/img/logo.png">
     <ion-searchbar></ion-searchbar>
   </div> -->
-      <ion-row>
+      <ion-row style="margin-top: 10px; margin-bottom: 8px;">
         <ion-col text-center>
-           <img src="assets/img/user.jpg" *ngIf="profile.image_url?.length==0" />
+           <img class="profile-img" src="assets/img/user.jpg" *ngIf="profile.image_url?.length==0" />
           <img [src]="profile.image_url"  *ngIf="profile.image_url?.length" />
-          <button ion-button class="bgcolor" style="color: #ee1b2e;font-size: 14px;font-weight: 500;margin-top: -42px;padding: 0.5rem 0 !important;" full type="submit" (click)="sendInterest()">Send Interest</button>
+          <button ion-button class="bgcolor request-button" full type="submit" (click)="sendInterest()">Send Interest</button>
         </ion-col>
-        <ion-col style="color: #ffff;">
+      </ion-row>
+      <ion-row>
+        <ion-col class="prof-name">
           <h4>{{profile.firstname }} {{profile.lastname }}</h4>
           <p>{{profile.age }} Year</p>
           <p>{{profile.state }}</p>
         </ion-col>
       </ion-row>
-  <div class="pink-panther" style="color: #ffff;">
+  <div class="pink-panther">
 
-  <p class="blog02" style="font-size: 20px;">About {{ profile.firstname }}</p>
+  <p class="blog02">About {{ profile.firstname }}</p>
 
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;" color="light">{{profile.aboutmyself }} </h6>
+  <h6 color="light">{{profile.aboutmyself }} </h6>
   
   </div>
-  <div class="pink-panther" style="color: #ffff;">
+  <div class="pink-panther card">
 
-  <p class="blog02" style="font-size: 20px;">Contact Details</p>
+  <p class="blog02 card-head">Contact Details</p>
 
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Mobile: {{ profile.mobile }}</h6>  
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Email: {{ profile.email }}</h6>
+  <h6>Mobile: {{ profile.mobile }}</h6>  
+  <h6>Email: {{ profile.email }}</h6>
   
 
   </div>
-  <div class="pink-panther" style="color: #ffff;">
+  <div class="pink-panther card">
 
-  <p class="blog02" style="font-size: 20px;">Other Details</p>
+  <p class="blog02 card-head">Other Details</p>
 
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Height: {{ profile.height }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Weight: {{ profile.weight }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Marital Status: {{ profile.maritalstatus }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Religion: {{ profile.religion }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Caste: {{ profile.caste }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Mother Tongue: {{ profile.caste }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;">Complexion : {{ profile.complexion }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;"> Manglik : {{ profile.manglik }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;"> Gotra : {{ profile.gotra }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;"> Date of Birth : {{ profile.day }} - {{ profile.month }}-{{ profile.year }}</h6>
-  <h6 style="font-family:open-sans; margin-top: 20px;padding-left: 9px;"> Place of Birth : {{ profile.placeofbirth }}</h6>
+  <h6>Height: {{ profile.height }}</h6>
+  <h6>Weight: {{ profile.weight }}</h6>
+  <h6>Marital Status: {{ profile.maritalstatus }}</h6>
+  <h6>Religion: {{ profile.religion }}</h6>
+  <h6>Caste: {{ profile.caste }}</h6>
+  <h6>Mother Tongue: {{ profile.caste }}</h6>
+  <h6>Complexion : {{ profile.complexion }}</h6>
+  <h6> Manglik : {{ profile.manglik }}</h6>
+  <h6> Gotra : {{ profile.gotra }}</h6>
+  <h6> Date of Birth : {{ profile.day }} - {{ profile.month }}-{{ profile.year }}</h6>
+  <h6> Place of Birth : {{ profile.placeofbirth }}</h6>
   
   </div>
       
