@@ -20,7 +20,9 @@
 
 <div class="profile-location">
   <ion-row align-items-center>
-    <ion-col col-8><div><i class="fa fa-map-marker location-icon" aria-hidden="true"></i></div></ion-col>
+    <ion-col col-8><div><i class="fa fa-map-marker location-icon" aria-hidden="true"></i>
+</div>
+</ion-col>
     <ion-col col-4><div><p class="location">{{ profile.state }}</p></div></ion-col>
   </ion-row>
 
@@ -29,25 +31,25 @@
   </div>
 
 
-<div class="counter">
+<!-- <div class="counter">
   <ion-row>
     <ion-col>
-      <!-- <p class="numbers">472</p>
-      <p class="numbers-title">Followers</p> -->
+      <p class="numbers">472</p>
+      <p class="numbers-title">Followers</p>
     </ion-col>
 
     <ion-col>
-      <!-- <p class="numbers">119</p>
-      <p class="numbers-title">Posts</p> -->
+      <p class="numbers">119</p>
+      <p class="numbers-title">Posts</p>
     </ion-col>
 
     <ion-col>
-      <!-- <p class="numbers">860</p>
-      <p class="numbers-title">Following</p> -->
+      <p class="numbers">860</p>
+      <p class="numbers-title">Following</p>
     </ion-col>
   </ion-row>
 
-</div>
+</div> -->
 
 <!-- <ion-slides autoplay="2500" loop="true" slidesPerView="4" class="slides">
   <ion-slide>
@@ -85,16 +87,16 @@
 <p style="font-family:open-sans; font-size:14px; margin-top:-1.5vh">ndcnmbnmzxbcnbzm zxncbnxzbcmbzm xzcbxczbmnzx</p>
 </div> -->
 
-<div style="position:relative; margin-top:-1vh; margin-left:2vw;">
-<h6>Personal Details </h6>
-<p style="font-family:open-sans; font-size:14px"><b>Mobile :</b> {{ profile.mobile }}</p>
-<p style="font-family:open-sans; font-size:14px"><b>Email :</b> {{ profile.email }}</p>
-<p style="font-family:open-sans; font-size:14px"><b>Address :</b> {{ profile.address }}</p>
-<p style="font-family:open-sans; font-size:14px"><b>State :</b>  {{ profile.state }}</p>
-<p style="font-family:open-sans; font-size:14px"><b>City :</b>  {{ profile.city }}</p>
-<p style="font-family:open-sans; font-size:14px"><b>District :</b>  {{ profile.distric }}</p>
-<p style="font-family:open-sans; font-size:14px"><b>Pincode :</b>  {{ profile.pincode }}</p>
-<p style="font-family:open-sans; font-size:14px"><b>GST IN :</b>  {{ profile.gst_in }}</p>
+<div class="card">
+  <h6>Personal Details </h6>
+  <p style="font-size:14px"><b>Mobile :</b> {{ profile.mobile }}</p>
+  <p style="font-size:14px"><b>Email :</b> {{ profile.email }}</p>
+  <p style="font-size:14px"><b>Address :</b> {{ profile.address }}</p>
+  <p style="font-size:14px"><b>State :</b>  {{ profile.state }}</p>
+  <p style="font-size:14px"><b>City :</b>  {{ profile.city }}</p>
+  <p style="font-size:14px"><b>District :</b>  {{ profile.distric }}</p>
+  <p style="font-size:14px"><b>Pincode :</b>  {{ profile.pincode }}</p>
+  <p style="font-size:14px"><b>GST IN :</b>  {{ profile.gst_in }}</p>
 </div>
 
 <hr>
